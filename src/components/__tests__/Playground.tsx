@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme'
+import { mount } from 'enzyme'
 import * as React from 'react'
 
 import { mockRouterProps } from '../../mocks/components'
@@ -39,18 +39,21 @@ const testValueProps: IPlaygroundProps = {
 
 const playgroundLinkProps: IPlaygroundProps = {
   ...baseProps,
-  ...mockRouterProps('/playground#lib=2&prgrm=CYSwzgDgNghgngCgOQAsCmUoHsCESCUA3EA', {}),
+  ...mockRouterProps(
+    '/playground#chap=4&ext=NONE&prgrm=CoUwzgLglgdg5gAhDAxgewCYgwgqgJQBkEIALWOAVwFsg',
+    {}
+  ),
   editorValue: 'This should not show up'
 }
 
 test('Playground renders correctly', () => {
   const app = <Playground {...testValueProps} />
-  const tree = shallow(app)
+  const tree = mount(app)
   expect(tree.debug()).toMatchSnapshot()
 })
 
 test('Playground with link renders correctly', () => {
   const app = <Playground {...playgroundLinkProps} />
-  const tree = shallow(app)
+  const tree = mount(app)
   expect(tree.debug()).toMatchSnapshot()
 })

@@ -1,6 +1,6 @@
 import { Colors, FormGroup, InputGroup, NonIdealState, Spinner } from '@blueprintjs/core'
 import { IconNames } from '@blueprintjs/icons'
-import { ColDef, GridApi, GridReadyEvent } from 'ag-grid'
+import { ColDef, GridApi, GridReadyEvent } from 'ag-grid-community'
 import { AgGridReact } from 'ag-grid-react'
 import 'ag-grid/dist/styles/ag-grid.css'
 import 'ag-grid/dist/styles/ag-theme-balham.css'
@@ -147,11 +147,7 @@ class Grading extends React.Component<IGradingProps, State> {
 
     /* Display either a loading screen or a table with overviews. */
     const loadingDisplay = (
-      <NonIdealState
-        className="Grading"
-        description="Fetching submissions..."
-        visual={<Spinner large={true} />}
-      />
+      <NonIdealState className="Grading" description="Fetching submissions..." icon={<Spinner />} />
     )
     const data = sortBy(this.props.gradingOverviews, [
       (a: GradingOverview) => -a.assessmentId,
@@ -232,7 +228,7 @@ class Grading extends React.Component<IGradingProps, State> {
   }
 
   private onGridReady = (params: GridReadyEvent) => {
-    this.gridApi = params.api
+    this.gridApi = params.api!
     this.gridApi.sizeColumnsToFit()
   }
 

@@ -1,13 +1,733 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Playground renders correctly 1`] = `
-"<HotKeys className=\\"Playground pt-dark\\" keyMap={{...}} handlers={{...}}>
-  <Workspace controlBarProps={{...}} editorProps={{...}} editorWidth=\\"50%\\" handleEditorWidthChange={[Function: handleEditorWidthChange]} handleSideContentHeightChange={[Function: handleSideContentHeightChange]} replProps={{...}} sideContentHeight={40} sideContentProps={{...}} />
-</HotKeys>"
+"<Playground editorValue=\\"Test value\\" isRunning={false} activeTab={0} editorWidth=\\"50%\\" sideContentHeight={40} sourceChapter={2} externalLibraryName=\\"NONE\\" output={{...}} replValue=\\"\\" handleBrowseHistoryDown={[Function: handleBrowseHistoryDown]} handleBrowseHistoryUp={[Function: handleBrowseHistoryUp]} handleChangeActiveTab={[Function: handleChangeActiveTab]} handleChapterSelect={[Function: handleChapterSelect]} handleEditorEval={[Function: handleEditorEval]} handleEditorValueChange={[Function: handleEditorValueChange]} handleEditorWidthChange={[Function: handleEditorWidthChange]} handleExternalSelect={[Function: handleExternalSelect]} handleGenerateLz={[Function: handleGenerateLz]} handleInterruptEval={[Function: handleInterruptEval]} handleReplEval={[Function: handleReplEval]} handleReplOutputClear={[Function: handleReplOutputClear]} handleReplValueChange={[Function: handleReplValueChange]} handleSideContentHeightChange={[Function: handleSideContentHeightChange]} match={{...}} location={{...}} history={{...}} staticContext={{...}}>
+  <HotKeys className=\\"Playground pt-dark\\" keyMap={{...}} handlers={{...}}>
+    <FocusTrap className=\\"Playground pt-dark\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]} component=\\"div\\">
+      <div tabIndex=\\"-1\\" className=\\"Playground pt-dark\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]}>
+        <Workspace controlBarProps={{...}} editorProps={{...}} editorWidth=\\"50%\\" handleEditorWidthChange={[Function: handleEditorWidthChange]} handleSideContentHeightChange={[Function: handleSideContentHeightChange]} replProps={{...}} sideContentHeight={40} sideContentProps={{...}}>
+          <div className=\\"workspace\\">
+            <ControlBar externalLibraryName=\\"NONE\\" handleChapterSelect={[Function: handleChapterSelect]} handleExternalSelect={[Function: handleExternalSelect]} handleEditorEval={[Function: handleEditorEval]} handleGenerateLz={[Function: handleGenerateLz]} handleInterruptEval={[Function: handleInterruptEval]} handleReplEval={[Function: handleReplEval]} handleReplOutputClear={[Function: handleReplOutputClear]} hasChapterSelect={true} hasSaveButton={false} hasShareButton={true} isRunning={false} queryString={[undefined]} questionProgress={{...}} sourceChapter={2} hasUnsavedChanges={[undefined]} onClickNext={[Function: onClickNext]} onClickPrevious={[Function: onClickPrevious]} onClickSave={[Function: onClickSave]}>
+              <div className=\\"ControlBar\\">
+                <div className=\\"ControlBar_editor pt-button-group\\">
+                  <Blueprint3.Tooltip content=\\"...or press shift-enter in the editor\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100}>
+                    <Blueprint3.Popover content=\\"...or press shift-enter in the editor\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100} autoFocus={false} canEscapeKeyClose={false} enforceFocus={false} interactionKind=\\"hover-target\\" lazy={true} popoverClassName=\\"bp3-tooltip\\" portalContainer={[undefined]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} inheritDarkTheme={true} minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" usePortal={true} wrapperTagName=\\"span\\">
+                      <Manager>
+                        <span className=\\"bp3-popover-wrapper\\">
+                          <Reference innerRef={[Function: target]}>
+                            <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                              <Blueprint3.ResizeSensor onResize={[Function]}>
+                                <span onBlur={[Function]} onFocus={[Function]} onMouseEnter={[Function]} onMouseLeave={[Function]} className=\\"bp3-popover-target\\">
+                                  <Blueprint3.Button disabled={false} fill={false} intent=\\"none\\" minimal={true} className=\\"\\" icon=\\"play\\" onClick={[Function: handleEditorEval]} tabIndex={0}>
+                                    <button type=\\"button\\" disabled={[undefined]} className=\\"bp3-button bp3-minimal\\" onClick={[Function: handleEditorEval]} tabIndex={0} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                      <Blueprint3.Icon icon=\\"play\\">
+                                        <span icon=\\"play\\" className=\\"bp3-icon bp3-icon-play\\" title={[undefined]}>
+                                          <svg fill={[undefined]} data-icon=\\"play\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                            <desc>
+                                              play
+                                            </desc>
+                                            <path d=\\"M12 8c0-.35-.19-.64-.46-.82l.01-.02-6-4-.01.02A.969.969 0 0 0 5 3c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1 .21 0 .39-.08.54-.18l.01.02 6-4-.01-.02c.27-.18.46-.47.46-.82z\\" fillRule=\\"evenodd\\" />
+                                          </svg>
+                                        </span>
+                                      </Blueprint3.Icon>
+                                      <span className=\\"bp3-button-text\\">
+                                        Run
+                                      </span>
+                                      <Blueprint3.Icon icon={[undefined]} />
+                                    </button>
+                                  </Blueprint3.Button>
+                                </span>
+                              </Blueprint3.ResizeSensor>
+                            </InnerReference>
+                          </Reference>
+                          <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={false} canOutsideClickClose={false} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={100} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                        </span>
+                      </Manager>
+                    </Blueprint3.Popover>
+                  </Blueprint3.Tooltip>
+                   
+                  <Blueprint3.Popover popoverClassName=\\"Popover-share\\" inheritDarkTheme={false} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} hoverCloseDelay={300} hoverOpenDelay={150} interactionKind=\\"click\\" minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" transitionDuration={300} usePortal={true} wrapperTagName=\\"span\\">
+                    <Manager>
+                      <span className=\\"bp3-popover-wrapper\\">
+                        <Reference innerRef={[Function: target]}>
+                          <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                            <Blueprint3.ResizeSensor onResize={[Function]}>
+                              <span onClick={[Function]} className=\\"bp3-popover-target\\">
+                                <Blueprint3.Button disabled={false} fill={false} intent=\\"none\\" minimal={true} className=\\"\\" icon=\\"share\\" onClick={[Function: handleGenerateLz]} tabIndex={[undefined]}>
+                                  <button type=\\"button\\" disabled={[undefined]} className=\\"bp3-button bp3-minimal\\" onClick={[Function: handleGenerateLz]} tabIndex={[undefined]} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                    <Blueprint3.Icon icon=\\"share\\">
+                                      <span icon=\\"share\\" className=\\"bp3-icon bp3-icon-share\\" title={[undefined]}>
+                                        <svg fill={[undefined]} data-icon=\\"share\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                          <desc>
+                                            share
+                                          </desc>
+                                          <path d=\\"M10.99 13.99h-9v-9h4.76l2-2H.99c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h11c.55 0 1-.45 1-1V7.24l-2 2v4.75zm4-14h-5c-.55 0-1 .45-1 1s.45 1 1 1h2.59L7.29 7.28a1 1 0 0 0-.3.71 1.003 1.003 0 0 0 1.71.71l5.29-5.29V6c0 .55.45 1 1 1s1-.45 1-1V1c0-.56-.45-1.01-1-1.01z\\" fillRule=\\"evenodd\\" />
+                                        </svg>
+                                      </span>
+                                    </Blueprint3.Icon>
+                                    <span className=\\"bp3-button-text\\">
+                                      Share
+                                    </span>
+                                    <Blueprint3.Icon icon={[undefined]} />
+                                  </button>
+                                </Blueprint3.Button>
+                              </span>
+                            </Blueprint3.ResizeSensor>
+                          </InnerReference>
+                        </Reference>
+                        <Blueprint3.Overlay autoFocus={true} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={true} canOutsideClickClose={true} className={[undefined]} enforceFocus={true} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={300} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                      </span>
+                    </Manager>
+                  </Blueprint3.Popover>
+                   
+                  <Blueprint3.Select className=\\"pt-minimal\\" items={{...}} onItemSelect={[Function: handleChapterSelect]} itemRenderer={[Function: chapterRenderer]} filterable={false}>
+                    <Blueprint3.QueryList className=\\"pt-minimal\\" items={{...}} onItemSelect={[Function]} itemRenderer={[Function: chapterRenderer]} renderer={[Function]} resetOnQuery={true}>
+                      <Blueprint3.Popover autoFocus={false} enforceFocus={false} isOpen={false} disabled={false} position=\\"bottom-left\\" className=\\"pt-minimal\\" onInteraction={[Function]} popoverClassName=\\"bp3-select-popover\\" onOpening={[Function]} onOpened={[Function]} onClosing={[Function]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} hasBackdrop={false} hoverCloseDelay={300} hoverOpenDelay={150} inheritDarkTheme={true} interactionKind=\\"click\\" minimal={false} modifiers={{...}} openOnTargetFocus={true} targetTagName=\\"span\\" transitionDuration={300} usePortal={true} wrapperTagName=\\"span\\">
+                        <Manager>
+                          <span className=\\"bp3-popover-wrapper pt-minimal\\">
+                            <Reference innerRef={[Function: target]}>
+                              <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                                <Blueprint3.ResizeSensor onResize={[Function]}>
+                                  <span onClick={[Function]} className=\\"bp3-popover-target\\">
+                                    <div onKeyDown={[Function]} onKeyUp={[undefined]} className=\\"\\" disabled={[undefined]} tabIndex={[undefined]}>
+                                      <Blueprint3.Button className=\\"pt-minimal\\" text=\\"Source §2\\" rightIcon=\\"double-caret-vertical\\">
+                                        <button type=\\"button\\" className=\\"bp3-button pt-minimal\\" disabled={[undefined]} onClick={[undefined]} onKeyDown={[Function]} onKeyUp={[Function]} tabIndex={[undefined]}>
+                                          <Blueprint3.Icon icon={[undefined]} />
+                                          <span className=\\"bp3-button-text\\">
+                                            Source §2
+                                          </span>
+                                          <Blueprint3.Icon icon=\\"double-caret-vertical\\">
+                                            <span icon=\\"double-caret-vertical\\" className=\\"bp3-icon bp3-icon-double-caret-vertical\\" title={[undefined]}>
+                                              <svg fill={[undefined]} data-icon=\\"double-caret-vertical\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                                <desc>
+                                                  double-caret-vertical
+                                                </desc>
+                                                <path d=\\"M5 7h6a1.003 1.003 0 0 0 .71-1.71l-3-3C8.53 2.11 8.28 2 8 2s-.53.11-.71.29l-3 3A1.003 1.003 0 0 0 5 7zm6 2H5a1.003 1.003 0 0 0-.71 1.71l3 3c.18.18.43.29.71.29s.53-.11.71-.29l3-3A1.003 1.003 0 0 0 11 9z\\" fillRule=\\"evenodd\\" />
+                                              </svg>
+                                            </span>
+                                          </Blueprint3.Icon>
+                                        </button>
+                                      </Blueprint3.Button>
+                                    </div>
+                                  </span>
+                                </Blueprint3.ResizeSensor>
+                              </InnerReference>
+                            </Reference>
+                            <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={true} canOutsideClickClose={true} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[Function]} onOpened={[Function]} onOpening={[Function]} transitionDuration={300} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                          </span>
+                        </Manager>
+                      </Blueprint3.Popover>
+                    </Blueprint3.QueryList>
+                  </Blueprint3.Select>
+                   
+                  <Blueprint3.Select className=\\"pt-minimal\\" items={{...}} onItemSelect={[Function: handleExternalSelect]} itemRenderer={[Function: externalRenderer]} filterable={false}>
+                    <Blueprint3.QueryList className=\\"pt-minimal\\" items={{...}} onItemSelect={[Function]} itemRenderer={[Function: externalRenderer]} renderer={[Function]} resetOnQuery={true}>
+                      <Blueprint3.Popover autoFocus={false} enforceFocus={false} isOpen={false} disabled={false} position=\\"bottom-left\\" className=\\"pt-minimal\\" onInteraction={[Function]} popoverClassName=\\"bp3-select-popover\\" onOpening={[Function]} onOpened={[Function]} onClosing={[Function]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} hasBackdrop={false} hoverCloseDelay={300} hoverOpenDelay={150} inheritDarkTheme={true} interactionKind=\\"click\\" minimal={false} modifiers={{...}} openOnTargetFocus={true} targetTagName=\\"span\\" transitionDuration={300} usePortal={true} wrapperTagName=\\"span\\">
+                        <Manager>
+                          <span className=\\"bp3-popover-wrapper pt-minimal\\">
+                            <Reference innerRef={[Function: target]}>
+                              <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                                <Blueprint3.ResizeSensor onResize={[Function]}>
+                                  <span onClick={[Function]} className=\\"bp3-popover-target\\">
+                                    <div onKeyDown={[Function]} onKeyUp={[undefined]} className=\\"\\" disabled={[undefined]} tabIndex={[undefined]}>
+                                      <Blueprint3.Button className=\\"pt-minimal\\" text=\\"NONE\\" rightIcon=\\"double-caret-vertical\\">
+                                        <button type=\\"button\\" className=\\"bp3-button pt-minimal\\" disabled={[undefined]} onClick={[undefined]} onKeyDown={[Function]} onKeyUp={[Function]} tabIndex={[undefined]}>
+                                          <Blueprint3.Icon icon={[undefined]} />
+                                          <span className=\\"bp3-button-text\\">
+                                            NONE
+                                          </span>
+                                          <Blueprint3.Icon icon=\\"double-caret-vertical\\">
+                                            <span icon=\\"double-caret-vertical\\" className=\\"bp3-icon bp3-icon-double-caret-vertical\\" title={[undefined]}>
+                                              <svg fill={[undefined]} data-icon=\\"double-caret-vertical\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                                <desc>
+                                                  double-caret-vertical
+                                                </desc>
+                                                <path d=\\"M5 7h6a1.003 1.003 0 0 0 .71-1.71l-3-3C8.53 2.11 8.28 2 8 2s-.53.11-.71.29l-3 3A1.003 1.003 0 0 0 5 7zm6 2H5a1.003 1.003 0 0 0-.71 1.71l3 3c.18.18.43.29.71.29s.53-.11.71-.29l3-3A1.003 1.003 0 0 0 11 9z\\" fillRule=\\"evenodd\\" />
+                                              </svg>
+                                            </span>
+                                          </Blueprint3.Icon>
+                                        </button>
+                                      </Blueprint3.Button>
+                                    </div>
+                                  </span>
+                                </Blueprint3.ResizeSensor>
+                              </InnerReference>
+                            </Reference>
+                            <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={true} canOutsideClickClose={true} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[Function]} onOpened={[Function]} onOpening={[Function]} transitionDuration={300} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                          </span>
+                        </Manager>
+                      </Blueprint3.Popover>
+                    </Blueprint3.QueryList>
+                  </Blueprint3.Select>
+                </div>
+                <div className=\\"ControlBar_flow pt-button-group\\">
+                   
+                   
+                   
+                </div>
+                <div className=\\"ControlBar_repl pt-button-group\\">
+                  <Blueprint3.Tooltip content=\\"...or press shift-enter in the REPL\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100}>
+                    <Blueprint3.Popover content=\\"...or press shift-enter in the REPL\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100} autoFocus={false} canEscapeKeyClose={false} enforceFocus={false} interactionKind=\\"hover-target\\" lazy={true} popoverClassName=\\"bp3-tooltip\\" portalContainer={[undefined]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} inheritDarkTheme={true} minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" usePortal={true} wrapperTagName=\\"span\\">
+                      <Manager>
+                        <span className=\\"bp3-popover-wrapper\\">
+                          <Reference innerRef={[Function: target]}>
+                            <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                              <Blueprint3.ResizeSensor onResize={[Function]}>
+                                <span onBlur={[Function]} onFocus={[Function]} onMouseEnter={[Function]} onMouseLeave={[Function]} className=\\"bp3-popover-target\\">
+                                  <Blueprint3.Button disabled={false} fill={false} intent=\\"none\\" minimal={true} className=\\"\\" icon=\\"code\\" onClick={[Function: handleReplEval]} tabIndex={0}>
+                                    <button type=\\"button\\" disabled={[undefined]} className=\\"bp3-button bp3-minimal\\" onClick={[Function: handleReplEval]} tabIndex={0} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                      <Blueprint3.Icon icon=\\"code\\">
+                                        <span icon=\\"code\\" className=\\"bp3-icon bp3-icon-code\\" title={[undefined]}>
+                                          <svg fill={[undefined]} data-icon=\\"code\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                            <desc>
+                                              code
+                                            </desc>
+                                            <path d=\\"M15.71 7.29l-3-3a1.003 1.003 0 0 0-1.42 1.42L13.59 8l-2.29 2.29c-.19.18-.3.43-.3.71a1.003 1.003 0 0 0 1.71.71l3-3c.18-.18.29-.43.29-.71 0-.28-.11-.53-.29-.71zM5 5a1.003 1.003 0 0 0-1.71-.71l-3 3C.11 7.47 0 7.72 0 8c0 .28.11.53.29.71l3 3a1.003 1.003 0 0 0 1.42-1.42L2.41 8 4.7 5.71c.19-.18.3-.43.3-.71zm4-3c-.48 0-.87.35-.96.81l-2 10c-.01.06-.04.12-.04.19 0 .55.45 1 1 1 .48 0 .87-.35.96-.81l2-10c.01-.06.04-.12.04-.19 0-.55-.45-1-1-1z\\" fillRule=\\"evenodd\\" />
+                                          </svg>
+                                        </span>
+                                      </Blueprint3.Icon>
+                                      <span className=\\"bp3-button-text\\">
+                                        Eval
+                                      </span>
+                                      <Blueprint3.Icon icon={[undefined]} />
+                                    </button>
+                                  </Blueprint3.Button>
+                                </span>
+                              </Blueprint3.ResizeSensor>
+                            </InnerReference>
+                          </Reference>
+                          <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={false} canOutsideClickClose={false} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={100} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                        </span>
+                      </Manager>
+                    </Blueprint3.Popover>
+                  </Blueprint3.Tooltip>
+                   
+                  <Blueprint3.Button disabled={false} fill={false} intent=\\"none\\" minimal={true} className=\\"\\" icon=\\"remove\\" onClick={[Function: handleReplOutputClear]}>
+                    <button type=\\"button\\" disabled={[undefined]} className=\\"bp3-button bp3-minimal\\" onClick={[Function: handleReplOutputClear]} onKeyDown={[Function]} onKeyUp={[Function]} tabIndex={[undefined]}>
+                      <Blueprint3.Icon icon=\\"remove\\">
+                        <span icon=\\"remove\\" className=\\"bp3-icon bp3-icon-remove\\" title={[undefined]}>
+                          <svg fill={[undefined]} data-icon=\\"remove\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                            <desc>
+                              remove
+                            </desc>
+                            <path d=\\"M10.99 6.99h-6c-.55 0-1 .45-1 1s.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1zm-3-7c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.68 6-6 6z\\" fillRule=\\"evenodd\\" />
+                          </svg>
+                        </span>
+                      </Blueprint3.Icon>
+                      <span className=\\"bp3-button-text\\">
+                        Clear
+                      </span>
+                      <Blueprint3.Icon icon={[undefined]} />
+                    </button>
+                  </Blueprint3.Button>
+                </div>
+              </div>
+            </ControlBar>
+            <div className=\\"row workspace-parent\\">
+              <div className=\\"editor-divider\\" />
+              <Resizable className=\\"resize-editor left-parent\\" enable={{...}} minWidth={0} onResize={[Function]} onResizeStop={[Function: onResizeStop]} size={{...}} onResizeStart={[Function: onResizeStart]} style={{...}} grid={{...}} lockAspectRatio={false} lockAspectRatioExtraWidth={0} lockAspectRatioExtraHeight={0} scale={1} resizeRatio={1}>
+                <div style={{...}} className=\\"resize-editor left-parent\\">
+                  <Editor editorValue=\\"Test value\\" handleEditorEval={[Function: handleEditorEval]} handleEditorValueChange={[Function: handleEditorValueChange]}>
+                    <HotKeys className=\\"Editor\\" handlers={{...}}>
+                      <FocusTrap className=\\"Editor\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]} component=\\"div\\">
+                        <div tabIndex=\\"-1\\" className=\\"Editor\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]}>
+                          <div className=\\"row editor-react-ace\\">
+                            <ReactAce className=\\"react-ace\\" commands={{...}} editorProps={{...}} fontSize={14} height=\\"100%\\" highlightActiveLine={false} mode=\\"javascript\\" onChange={[Function]} theme=\\"cobalt\\" value=\\"Test value\\" width=\\"100%\\" name=\\"brace-editor\\" focus={false} showGutter={true} onPaste={{...}} onLoad={{...}} onScroll={{...}} minLines={{...}} maxLines={{...}} readOnly={false} showPrintMargin={true} tabSize={4} cursorStart={1} style={{...}} scrollMargin={{...}} setOptions={{...}} wrapEnabled={false} enableBasicAutocompletion={false} enableLiveAutocompletion={false}>
+                              <div id=\\"brace-editor\\" style={{...}} />
+                            </ReactAce>
+                          </div>
+                        </div>
+                      </FocusTrap>
+                    </HotKeys>
+                  </Editor>
+                  <span className={[undefined]} style={[undefined]}>
+                    <Resizer direction=\\"right\\" onResizeStart={[Function: bound onResizeStart]} replaceStyles={[undefined]} className={[undefined]}>
+                      <div className={[undefined]} style={{...}} onMouseDown={[Function: onMouseDown]} onTouchStart={[Function: onTouchStart]} />
+                    </Resizer>
+                  </span>
+                </div>
+              </Resizable>
+              <div className=\\"right-parent\\">
+                <Resizable bounds=\\"parent\\" className=\\"resize-side-content\\" enable={{...}} minHeight={0} onResize={[Function]} onResizeStop={[Function: onResizeStop]} size={{...}} onResizeStart={[Function: onResizeStart]} style={{...}} grid={{...}} lockAspectRatio={false} lockAspectRatioExtraWidth={0} lockAspectRatioExtraHeight={0} scale={1} resizeRatio={1}>
+                  <div style={{...}} className=\\"resize-side-content\\">
+                    <SideContent activeTab={0} handleChangeActiveTab={[Function: handleChangeActiveTab]} tabs={{...}}>
+                      <div className=\\"side-content\\">
+                        <Blueprint3.Card elevation={0} interactive={false}>
+                          <div className=\\"bp3-card bp3-elevation-0\\">
+                            <div className=\\"side-content-header\\">
+                              <Blueprint3.Tooltip content=\\"Introduction\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100}>
+                                <Blueprint3.Popover content=\\"Introduction\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100} autoFocus={false} canEscapeKeyClose={false} enforceFocus={false} interactionKind=\\"hover-target\\" lazy={true} popoverClassName=\\"bp3-tooltip\\" portalContainer={[undefined]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} inheritDarkTheme={true} minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" usePortal={true} wrapperTagName=\\"span\\">
+                                  <Manager>
+                                    <span className=\\"bp3-popover-wrapper\\">
+                                      <Reference innerRef={[Function: target]}>
+                                        <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                                          <Blueprint3.ResizeSensor onResize={[Function]}>
+                                            <span onBlur={[Function]} onFocus={[Function]} onMouseEnter={[Function]} onMouseLeave={[Function]} className=\\"bp3-popover-target\\">
+                                              <Blueprint3.Button className=\\"side-content-header-button\\" icon=\\"compass\\" minimal={true} onClick={[Function]} active={true} disabled={[undefined]} tabIndex={0}>
+                                                <button type=\\"button\\" className=\\"bp3-button bp3-active bp3-minimal side-content-header-button\\" onClick={[Function]} disabled={[undefined]} tabIndex={0} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                                  <Blueprint3.Icon icon=\\"compass\\">
+                                                    <span icon=\\"compass\\" className=\\"bp3-icon bp3-icon-compass\\" title={[undefined]}>
+                                                      <svg fill={[undefined]} data-icon=\\"compass\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                                        <desc>
+                                                          compass
+                                                        </desc>
+                                                        <path d=\\"M12 8c0 .14-.03.27-.08.39l-3 6.99c-.15.37-.51.62-.92.62s-.77-.25-.92-.61l-3-6.99a1.006 1.006 0 0 1 0-.79l3-6.99C7.23.25 7.59 0 8 0s.77.25.92.61l3 6.99c.05.13.08.26.08.4zM8 3.54L6.09 8h3.82L8 3.54z\\" fillRule=\\"evenodd\\" />
+                                                      </svg>
+                                                    </span>
+                                                  </Blueprint3.Icon>
+                                                  <Blueprint3.Icon icon={[undefined]} />
+                                                </button>
+                                              </Blueprint3.Button>
+                                            </span>
+                                          </Blueprint3.ResizeSensor>
+                                        </InnerReference>
+                                      </Reference>
+                                      <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={false} canOutsideClickClose={false} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={100} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                                    </span>
+                                  </Manager>
+                                </Blueprint3.Popover>
+                              </Blueprint3.Tooltip>
+                              <Blueprint3.Tooltip content=\\"List Visualizer\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100}>
+                                <Blueprint3.Popover content=\\"List Visualizer\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100} autoFocus={false} canEscapeKeyClose={false} enforceFocus={false} interactionKind=\\"hover-target\\" lazy={true} popoverClassName=\\"bp3-tooltip\\" portalContainer={[undefined]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} inheritDarkTheme={true} minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" usePortal={true} wrapperTagName=\\"span\\">
+                                  <Manager>
+                                    <span className=\\"bp3-popover-wrapper\\">
+                                      <Reference innerRef={[Function: target]}>
+                                        <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                                          <Blueprint3.ResizeSensor onResize={[Function]}>
+                                            <span onBlur={[Function]} onFocus={[Function]} onMouseEnter={[Function]} onMouseLeave={[Function]} className=\\"bp3-popover-target\\">
+                                              <Blueprint3.Button className=\\"side-content-header-button\\" icon=\\"eye-open\\" minimal={true} onClick={[Function]} active={false} disabled={[undefined]} tabIndex={0}>
+                                                <button type=\\"button\\" className=\\"bp3-button bp3-minimal side-content-header-button\\" onClick={[Function]} disabled={[undefined]} tabIndex={0} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                                  <Blueprint3.Icon icon=\\"eye-open\\">
+                                                    <span icon=\\"eye-open\\" className=\\"bp3-icon bp3-icon-eye-open\\" title={[undefined]}>
+                                                      <svg fill={[undefined]} data-icon=\\"eye-open\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                                        <desc>
+                                                          eye-open
+                                                        </desc>
+                                                        <path d=\\"M8.002 7.003a1.003 1.003 0 0 0 0 2.005 1.003 1.003 0 0 0 0-2.005zm7.988.972v-.02-.01-.02-.02a.675.675 0 0 0-.17-.36c-.509-.673-1.118-1.264-1.737-1.806-1.328-1.173-2.846-2.155-4.523-2.546a6.702 6.702 0 0 0-2.925-.06c-.889.18-1.738.541-2.546.992C2.84 4.837 1.692 5.81.694 6.902c-.18.211-.36.411-.53.632a.742.742 0 0 0 0 .932c.51.672 1.119 1.264 1.738 1.805 1.328 1.173 2.846 2.156 4.523 2.547.968.23 1.947.24 2.925.04.889-.18 1.738-.542 2.546-.993 1.248-.712 2.397-1.684 3.395-2.777.18-.2.37-.411.54-.632.09-.1.149-.23.169-.36v-.02-.02-.01-.02-.03c0-.01-.01-.01-.01-.02zm-7.988 3.038a2.998 2.998 0 0 1-2.995-3.008 2.998 2.998 0 0 1 2.995-3.008 2.998 2.998 0 0 1 2.996 3.008 2.998 2.998 0 0 1-2.996 3.008z\\" fillRule=\\"evenodd\\" />
+                                                      </svg>
+                                                    </span>
+                                                  </Blueprint3.Icon>
+                                                  <Blueprint3.Icon icon={[undefined]} />
+                                                </button>
+                                              </Blueprint3.Button>
+                                            </span>
+                                          </Blueprint3.ResizeSensor>
+                                        </InnerReference>
+                                      </Reference>
+                                      <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={false} canOutsideClickClose={false} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={100} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                                    </span>
+                                  </Manager>
+                                </Blueprint3.Popover>
+                              </Blueprint3.Tooltip>
+                            </div>
+                            <hr />
+                            <div className=\\"side-content-text\\">
+                              <Markdown content=\\"\\\\nWelcome to the Source Academy playground!\\\\n\\\\nThe language _Source_ is the official language of the textbook _Structure and\\\\nInterpretation of Computer Programs, JavaScript Adaptation_. You have never\\\\nheard of Source? No worries! It was invented just for the purpose of the book.\\\\nSource is a sublanguage of ECMAScript 2016 (7th Edition) and defined in [the\\\\ndocuments titled _\\"Source §x\\"_](https://www.comp.nus.edu.sg/~cs1101s/source/), where x refers to\\\\nthe respective textbook chapter. For example, Source §3 is suitable for\\\\ntextbook Chapter 3 and the preceeding chapters.\\\\n\\\\nThe playground comes with an editor and a REPL, on the left and right of the\\\\nscreen, respectively. You may customise the layout of the playground by\\\\nclicking and dragging on the right border of the editor, or the top border of\\\\nthe REPL.\\\\n\\">
+                                <div className=\\"md\\" dangerouslySetInnerHTML={{...}} />
+                              </Markdown>
+                            </div>
+                          </div>
+                        </Blueprint3.Card>
+                      </div>
+                    </SideContent>
+                    <div className=\\"side-content-divider\\" />
+                    <span className={[undefined]} style={[undefined]}>
+                      <Resizer direction=\\"bottom\\" onResizeStart={[Function: bound onResizeStart]} replaceStyles={[undefined]} className={[undefined]}>
+                        <div className={[undefined]} style={{...}} onMouseDown={[Function: onMouseDown]} onTouchStart={[Function: onTouchStart]} />
+                      </Resizer>
+                    </span>
+                  </div>
+                </Resizable>
+                <Repl output={{...}} replValue=\\"\\" handleBrowseHistoryDown={[Function: handleBrowseHistoryDown]} handleBrowseHistoryUp={[Function: handleBrowseHistoryUp]} handleReplEval={[Function: handleReplEval]} handleReplValueChange={[Function: handleReplValueChange]}>
+                  <div className=\\"Repl\\">
+                    <div className=\\"repl-output-parent\\">
+                      <HotKeys className=\\"repl-input-parent row pt-card pt-elevation-0\\" handlers={{...}}>
+                        <FocusTrap className=\\"repl-input-parent row pt-card pt-elevation-0\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]} component=\\"div\\">
+                          <div tabIndex=\\"-1\\" className=\\"repl-input-parent row pt-card pt-elevation-0\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]}>
+                            <ReplInput output={{...}} replValue=\\"\\" handleBrowseHistoryDown={[Function: handleBrowseHistoryDown]} handleBrowseHistoryUp={[Function: handleBrowseHistoryUp]} handleReplEval={[Function: handleReplEval]} handleReplValueChange={[Function: handleReplValueChange]}>
+                              <ReactAce className=\\"repl-react-ace react-ace\\" mode=\\"javascript\\" theme=\\"cobalt\\" height=\\"1px\\" width=\\"100%\\" value=\\"\\" onChange={[Function: handleReplValueChange]} commands={{...}} minLines={1} maxLines={20} fontSize={14} highlightActiveLine={false} showGutter={false} name=\\"brace-editor\\" focus={false} onPaste={{...}} onLoad={{...}} onScroll={{...}} readOnly={false} showPrintMargin={true} tabSize={4} cursorStart={1} editorProps={{...}} style={{...}} scrollMargin={{...}} setOptions={{...}} wrapEnabled={false} enableBasicAutocompletion={false} enableLiveAutocompletion={false}>
+                                <div id=\\"brace-editor\\" style={{...}} />
+                              </ReactAce>
+                              <div className=\\"replInputBottom\\" />
+                            </ReplInput>
+                          </div>
+                        </FocusTrap>
+                      </HotKeys>
+                    </div>
+                  </div>
+                </Repl>
+              </div>
+            </div>
+          </div>
+        </Workspace>
+      </div>
+    </FocusTrap>
+  </HotKeys>
+</Playground>"
 `;
 
 exports[`Playground with link renders correctly 1`] = `
-"<HotKeys className=\\"Playground pt-dark\\" keyMap={{...}} handlers={{...}}>
-  <Workspace controlBarProps={{...}} editorProps={{...}} editorWidth=\\"50%\\" handleEditorWidthChange={[Function: handleEditorWidthChange]} handleSideContentHeightChange={[Function: handleSideContentHeightChange]} replProps={{...}} sideContentHeight={40} sideContentProps={{...}} />
-</HotKeys>"
+"<Playground editorValue=\\"This should not show up\\" isRunning={false} activeTab={0} editorWidth=\\"50%\\" sideContentHeight={40} sourceChapter={2} externalLibraryName=\\"NONE\\" output={{...}} replValue=\\"\\" handleBrowseHistoryDown={[Function: handleBrowseHistoryDown]} handleBrowseHistoryUp={[Function: handleBrowseHistoryUp]} handleChangeActiveTab={[Function: handleChangeActiveTab]} handleChapterSelect={[Function: handleChapterSelect]} handleEditorEval={[Function: handleEditorEval]} handleEditorValueChange={[Function: handleEditorValueChange]} handleEditorWidthChange={[Function: handleEditorWidthChange]} handleExternalSelect={[Function: handleExternalSelect]} handleGenerateLz={[Function: handleGenerateLz]} handleInterruptEval={[Function: handleInterruptEval]} handleReplEval={[Function: handleReplEval]} handleReplOutputClear={[Function: handleReplOutputClear]} handleReplValueChange={[Function: handleReplValueChange]} handleSideContentHeightChange={[Function: handleSideContentHeightChange]} match={{...}} location={{...}} history={{...}} staticContext={{...}}>
+  <HotKeys className=\\"Playground pt-dark\\" keyMap={{...}} handlers={{...}}>
+    <FocusTrap className=\\"Playground pt-dark\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]} component=\\"div\\">
+      <div tabIndex=\\"-1\\" className=\\"Playground pt-dark\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]}>
+        <Workspace controlBarProps={{...}} editorProps={{...}} editorWidth=\\"50%\\" handleEditorWidthChange={[Function: handleEditorWidthChange]} handleSideContentHeightChange={[Function: handleSideContentHeightChange]} replProps={{...}} sideContentHeight={40} sideContentProps={{...}}>
+          <div className=\\"workspace\\">
+            <ControlBar externalLibraryName=\\"NONE\\" handleChapterSelect={[Function: handleChapterSelect]} handleExternalSelect={[Function: handleExternalSelect]} handleEditorEval={[Function: handleEditorEval]} handleGenerateLz={[Function: handleGenerateLz]} handleInterruptEval={[Function: handleInterruptEval]} handleReplEval={[Function: handleReplEval]} handleReplOutputClear={[Function: handleReplOutputClear]} hasChapterSelect={true} hasSaveButton={false} hasShareButton={true} isRunning={false} queryString={[undefined]} questionProgress={{...}} sourceChapter={2} hasUnsavedChanges={[undefined]} onClickNext={[Function: onClickNext]} onClickPrevious={[Function: onClickPrevious]} onClickSave={[Function: onClickSave]}>
+              <div className=\\"ControlBar\\">
+                <div className=\\"ControlBar_editor pt-button-group\\">
+                  <Blueprint3.Tooltip content=\\"...or press shift-enter in the editor\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100}>
+                    <Blueprint3.Popover content=\\"...or press shift-enter in the editor\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100} autoFocus={false} canEscapeKeyClose={false} enforceFocus={false} interactionKind=\\"hover-target\\" lazy={true} popoverClassName=\\"bp3-tooltip\\" portalContainer={[undefined]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} inheritDarkTheme={true} minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" usePortal={true} wrapperTagName=\\"span\\">
+                      <Manager>
+                        <span className=\\"bp3-popover-wrapper\\">
+                          <Reference innerRef={[Function: target]}>
+                            <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                              <Blueprint3.ResizeSensor onResize={[Function]}>
+                                <span onBlur={[Function]} onFocus={[Function]} onMouseEnter={[Function]} onMouseLeave={[Function]} className=\\"bp3-popover-target\\">
+                                  <Blueprint3.Button disabled={false} fill={false} intent=\\"none\\" minimal={true} className=\\"\\" icon=\\"play\\" onClick={[Function: handleEditorEval]} tabIndex={0}>
+                                    <button type=\\"button\\" disabled={[undefined]} className=\\"bp3-button bp3-minimal\\" onClick={[Function: handleEditorEval]} tabIndex={0} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                      <Blueprint3.Icon icon=\\"play\\">
+                                        <span icon=\\"play\\" className=\\"bp3-icon bp3-icon-play\\" title={[undefined]}>
+                                          <svg fill={[undefined]} data-icon=\\"play\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                            <desc>
+                                              play
+                                            </desc>
+                                            <path d=\\"M12 8c0-.35-.19-.64-.46-.82l.01-.02-6-4-.01.02A.969.969 0 0 0 5 3c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1 .21 0 .39-.08.54-.18l.01.02 6-4-.01-.02c.27-.18.46-.47.46-.82z\\" fillRule=\\"evenodd\\" />
+                                          </svg>
+                                        </span>
+                                      </Blueprint3.Icon>
+                                      <span className=\\"bp3-button-text\\">
+                                        Run
+                                      </span>
+                                      <Blueprint3.Icon icon={[undefined]} />
+                                    </button>
+                                  </Blueprint3.Button>
+                                </span>
+                              </Blueprint3.ResizeSensor>
+                            </InnerReference>
+                          </Reference>
+                          <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={false} canOutsideClickClose={false} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={100} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                        </span>
+                      </Manager>
+                    </Blueprint3.Popover>
+                  </Blueprint3.Tooltip>
+                   
+                  <Blueprint3.Popover popoverClassName=\\"Popover-share\\" inheritDarkTheme={false} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} hoverCloseDelay={300} hoverOpenDelay={150} interactionKind=\\"click\\" minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" transitionDuration={300} usePortal={true} wrapperTagName=\\"span\\">
+                    <Manager>
+                      <span className=\\"bp3-popover-wrapper\\">
+                        <Reference innerRef={[Function: target]}>
+                          <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                            <Blueprint3.ResizeSensor onResize={[Function]}>
+                              <span onClick={[Function]} className=\\"bp3-popover-target\\">
+                                <Blueprint3.Button disabled={false} fill={false} intent=\\"none\\" minimal={true} className=\\"\\" icon=\\"share\\" onClick={[Function: handleGenerateLz]} tabIndex={[undefined]}>
+                                  <button type=\\"button\\" disabled={[undefined]} className=\\"bp3-button bp3-minimal\\" onClick={[Function: handleGenerateLz]} tabIndex={[undefined]} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                    <Blueprint3.Icon icon=\\"share\\">
+                                      <span icon=\\"share\\" className=\\"bp3-icon bp3-icon-share\\" title={[undefined]}>
+                                        <svg fill={[undefined]} data-icon=\\"share\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                          <desc>
+                                            share
+                                          </desc>
+                                          <path d=\\"M10.99 13.99h-9v-9h4.76l2-2H.99c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h11c.55 0 1-.45 1-1V7.24l-2 2v4.75zm4-14h-5c-.55 0-1 .45-1 1s.45 1 1 1h2.59L7.29 7.28a1 1 0 0 0-.3.71 1.003 1.003 0 0 0 1.71.71l5.29-5.29V6c0 .55.45 1 1 1s1-.45 1-1V1c0-.56-.45-1.01-1-1.01z\\" fillRule=\\"evenodd\\" />
+                                        </svg>
+                                      </span>
+                                    </Blueprint3.Icon>
+                                    <span className=\\"bp3-button-text\\">
+                                      Share
+                                    </span>
+                                    <Blueprint3.Icon icon={[undefined]} />
+                                  </button>
+                                </Blueprint3.Button>
+                              </span>
+                            </Blueprint3.ResizeSensor>
+                          </InnerReference>
+                        </Reference>
+                        <Blueprint3.Overlay autoFocus={true} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={true} canOutsideClickClose={true} className={[undefined]} enforceFocus={true} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={300} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                      </span>
+                    </Manager>
+                  </Blueprint3.Popover>
+                   
+                  <Blueprint3.Select className=\\"pt-minimal\\" items={{...}} onItemSelect={[Function: handleChapterSelect]} itemRenderer={[Function: chapterRenderer]} filterable={false}>
+                    <Blueprint3.QueryList className=\\"pt-minimal\\" items={{...}} onItemSelect={[Function]} itemRenderer={[Function: chapterRenderer]} renderer={[Function]} resetOnQuery={true}>
+                      <Blueprint3.Popover autoFocus={false} enforceFocus={false} isOpen={false} disabled={false} position=\\"bottom-left\\" className=\\"pt-minimal\\" onInteraction={[Function]} popoverClassName=\\"bp3-select-popover\\" onOpening={[Function]} onOpened={[Function]} onClosing={[Function]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} hasBackdrop={false} hoverCloseDelay={300} hoverOpenDelay={150} inheritDarkTheme={true} interactionKind=\\"click\\" minimal={false} modifiers={{...}} openOnTargetFocus={true} targetTagName=\\"span\\" transitionDuration={300} usePortal={true} wrapperTagName=\\"span\\">
+                        <Manager>
+                          <span className=\\"bp3-popover-wrapper pt-minimal\\">
+                            <Reference innerRef={[Function: target]}>
+                              <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                                <Blueprint3.ResizeSensor onResize={[Function]}>
+                                  <span onClick={[Function]} className=\\"bp3-popover-target\\">
+                                    <div onKeyDown={[Function]} onKeyUp={[undefined]} className=\\"\\" disabled={[undefined]} tabIndex={[undefined]}>
+                                      <Blueprint3.Button className=\\"pt-minimal\\" text=\\"Source §2\\" rightIcon=\\"double-caret-vertical\\">
+                                        <button type=\\"button\\" className=\\"bp3-button pt-minimal\\" disabled={[undefined]} onClick={[undefined]} onKeyDown={[Function]} onKeyUp={[Function]} tabIndex={[undefined]}>
+                                          <Blueprint3.Icon icon={[undefined]} />
+                                          <span className=\\"bp3-button-text\\">
+                                            Source §2
+                                          </span>
+                                          <Blueprint3.Icon icon=\\"double-caret-vertical\\">
+                                            <span icon=\\"double-caret-vertical\\" className=\\"bp3-icon bp3-icon-double-caret-vertical\\" title={[undefined]}>
+                                              <svg fill={[undefined]} data-icon=\\"double-caret-vertical\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                                <desc>
+                                                  double-caret-vertical
+                                                </desc>
+                                                <path d=\\"M5 7h6a1.003 1.003 0 0 0 .71-1.71l-3-3C8.53 2.11 8.28 2 8 2s-.53.11-.71.29l-3 3A1.003 1.003 0 0 0 5 7zm6 2H5a1.003 1.003 0 0 0-.71 1.71l3 3c.18.18.43.29.71.29s.53-.11.71-.29l3-3A1.003 1.003 0 0 0 11 9z\\" fillRule=\\"evenodd\\" />
+                                              </svg>
+                                            </span>
+                                          </Blueprint3.Icon>
+                                        </button>
+                                      </Blueprint3.Button>
+                                    </div>
+                                  </span>
+                                </Blueprint3.ResizeSensor>
+                              </InnerReference>
+                            </Reference>
+                            <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={true} canOutsideClickClose={true} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[Function]} onOpened={[Function]} onOpening={[Function]} transitionDuration={300} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                          </span>
+                        </Manager>
+                      </Blueprint3.Popover>
+                    </Blueprint3.QueryList>
+                  </Blueprint3.Select>
+                   
+                  <Blueprint3.Select className=\\"pt-minimal\\" items={{...}} onItemSelect={[Function: handleExternalSelect]} itemRenderer={[Function: externalRenderer]} filterable={false}>
+                    <Blueprint3.QueryList className=\\"pt-minimal\\" items={{...}} onItemSelect={[Function]} itemRenderer={[Function: externalRenderer]} renderer={[Function]} resetOnQuery={true}>
+                      <Blueprint3.Popover autoFocus={false} enforceFocus={false} isOpen={false} disabled={false} position=\\"bottom-left\\" className=\\"pt-minimal\\" onInteraction={[Function]} popoverClassName=\\"bp3-select-popover\\" onOpening={[Function]} onOpened={[Function]} onClosing={[Function]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} hasBackdrop={false} hoverCloseDelay={300} hoverOpenDelay={150} inheritDarkTheme={true} interactionKind=\\"click\\" minimal={false} modifiers={{...}} openOnTargetFocus={true} targetTagName=\\"span\\" transitionDuration={300} usePortal={true} wrapperTagName=\\"span\\">
+                        <Manager>
+                          <span className=\\"bp3-popover-wrapper pt-minimal\\">
+                            <Reference innerRef={[Function: target]}>
+                              <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                                <Blueprint3.ResizeSensor onResize={[Function]}>
+                                  <span onClick={[Function]} className=\\"bp3-popover-target\\">
+                                    <div onKeyDown={[Function]} onKeyUp={[undefined]} className=\\"\\" disabled={[undefined]} tabIndex={[undefined]}>
+                                      <Blueprint3.Button className=\\"pt-minimal\\" text=\\"NONE\\" rightIcon=\\"double-caret-vertical\\">
+                                        <button type=\\"button\\" className=\\"bp3-button pt-minimal\\" disabled={[undefined]} onClick={[undefined]} onKeyDown={[Function]} onKeyUp={[Function]} tabIndex={[undefined]}>
+                                          <Blueprint3.Icon icon={[undefined]} />
+                                          <span className=\\"bp3-button-text\\">
+                                            NONE
+                                          </span>
+                                          <Blueprint3.Icon icon=\\"double-caret-vertical\\">
+                                            <span icon=\\"double-caret-vertical\\" className=\\"bp3-icon bp3-icon-double-caret-vertical\\" title={[undefined]}>
+                                              <svg fill={[undefined]} data-icon=\\"double-caret-vertical\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                                <desc>
+                                                  double-caret-vertical
+                                                </desc>
+                                                <path d=\\"M5 7h6a1.003 1.003 0 0 0 .71-1.71l-3-3C8.53 2.11 8.28 2 8 2s-.53.11-.71.29l-3 3A1.003 1.003 0 0 0 5 7zm6 2H5a1.003 1.003 0 0 0-.71 1.71l3 3c.18.18.43.29.71.29s.53-.11.71-.29l3-3A1.003 1.003 0 0 0 11 9z\\" fillRule=\\"evenodd\\" />
+                                              </svg>
+                                            </span>
+                                          </Blueprint3.Icon>
+                                        </button>
+                                      </Blueprint3.Button>
+                                    </div>
+                                  </span>
+                                </Blueprint3.ResizeSensor>
+                              </InnerReference>
+                            </Reference>
+                            <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={true} canOutsideClickClose={true} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[Function]} onOpened={[Function]} onOpening={[Function]} transitionDuration={300} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                          </span>
+                        </Manager>
+                      </Blueprint3.Popover>
+                    </Blueprint3.QueryList>
+                  </Blueprint3.Select>
+                </div>
+                <div className=\\"ControlBar_flow pt-button-group\\">
+                   
+                   
+                   
+                </div>
+                <div className=\\"ControlBar_repl pt-button-group\\">
+                  <Blueprint3.Tooltip content=\\"...or press shift-enter in the REPL\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100}>
+                    <Blueprint3.Popover content=\\"...or press shift-enter in the REPL\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100} autoFocus={false} canEscapeKeyClose={false} enforceFocus={false} interactionKind=\\"hover-target\\" lazy={true} popoverClassName=\\"bp3-tooltip\\" portalContainer={[undefined]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} inheritDarkTheme={true} minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" usePortal={true} wrapperTagName=\\"span\\">
+                      <Manager>
+                        <span className=\\"bp3-popover-wrapper\\">
+                          <Reference innerRef={[Function: target]}>
+                            <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                              <Blueprint3.ResizeSensor onResize={[Function]}>
+                                <span onBlur={[Function]} onFocus={[Function]} onMouseEnter={[Function]} onMouseLeave={[Function]} className=\\"bp3-popover-target\\">
+                                  <Blueprint3.Button disabled={false} fill={false} intent=\\"none\\" minimal={true} className=\\"\\" icon=\\"code\\" onClick={[Function: handleReplEval]} tabIndex={0}>
+                                    <button type=\\"button\\" disabled={[undefined]} className=\\"bp3-button bp3-minimal\\" onClick={[Function: handleReplEval]} tabIndex={0} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                      <Blueprint3.Icon icon=\\"code\\">
+                                        <span icon=\\"code\\" className=\\"bp3-icon bp3-icon-code\\" title={[undefined]}>
+                                          <svg fill={[undefined]} data-icon=\\"code\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                            <desc>
+                                              code
+                                            </desc>
+                                            <path d=\\"M15.71 7.29l-3-3a1.003 1.003 0 0 0-1.42 1.42L13.59 8l-2.29 2.29c-.19.18-.3.43-.3.71a1.003 1.003 0 0 0 1.71.71l3-3c.18-.18.29-.43.29-.71 0-.28-.11-.53-.29-.71zM5 5a1.003 1.003 0 0 0-1.71-.71l-3 3C.11 7.47 0 7.72 0 8c0 .28.11.53.29.71l3 3a1.003 1.003 0 0 0 1.42-1.42L2.41 8 4.7 5.71c.19-.18.3-.43.3-.71zm4-3c-.48 0-.87.35-.96.81l-2 10c-.01.06-.04.12-.04.19 0 .55.45 1 1 1 .48 0 .87-.35.96-.81l2-10c.01-.06.04-.12.04-.19 0-.55-.45-1-1-1z\\" fillRule=\\"evenodd\\" />
+                                          </svg>
+                                        </span>
+                                      </Blueprint3.Icon>
+                                      <span className=\\"bp3-button-text\\">
+                                        Eval
+                                      </span>
+                                      <Blueprint3.Icon icon={[undefined]} />
+                                    </button>
+                                  </Blueprint3.Button>
+                                </span>
+                              </Blueprint3.ResizeSensor>
+                            </InnerReference>
+                          </Reference>
+                          <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={false} canOutsideClickClose={false} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={100} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                        </span>
+                      </Manager>
+                    </Blueprint3.Popover>
+                  </Blueprint3.Tooltip>
+                   
+                  <Blueprint3.Button disabled={false} fill={false} intent=\\"none\\" minimal={true} className=\\"\\" icon=\\"remove\\" onClick={[Function: handleReplOutputClear]}>
+                    <button type=\\"button\\" disabled={[undefined]} className=\\"bp3-button bp3-minimal\\" onClick={[Function: handleReplOutputClear]} onKeyDown={[Function]} onKeyUp={[Function]} tabIndex={[undefined]}>
+                      <Blueprint3.Icon icon=\\"remove\\">
+                        <span icon=\\"remove\\" className=\\"bp3-icon bp3-icon-remove\\" title={[undefined]}>
+                          <svg fill={[undefined]} data-icon=\\"remove\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                            <desc>
+                              remove
+                            </desc>
+                            <path d=\\"M10.99 6.99h-6c-.55 0-1 .45-1 1s.45 1 1 1h6c.55 0 1-.45 1-1s-.45-1-1-1zm-3-7c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.68 6-6 6z\\" fillRule=\\"evenodd\\" />
+                          </svg>
+                        </span>
+                      </Blueprint3.Icon>
+                      <span className=\\"bp3-button-text\\">
+                        Clear
+                      </span>
+                      <Blueprint3.Icon icon={[undefined]} />
+                    </button>
+                  </Blueprint3.Button>
+                </div>
+              </div>
+            </ControlBar>
+            <div className=\\"row workspace-parent\\">
+              <div className=\\"editor-divider\\" />
+              <Resizable className=\\"resize-editor left-parent\\" enable={{...}} minWidth={0} onResize={[Function]} onResizeStop={[Function: onResizeStop]} size={{...}} onResizeStart={[Function: onResizeStart]} style={{...}} grid={{...}} lockAspectRatio={false} lockAspectRatioExtraWidth={0} lockAspectRatioExtraHeight={0} scale={1} resizeRatio={1}>
+                <div style={{...}} className=\\"resize-editor left-parent\\">
+                  <Editor editorValue=\\"This should not show up\\" handleEditorEval={[Function: handleEditorEval]} handleEditorValueChange={[Function: handleEditorValueChange]}>
+                    <HotKeys className=\\"Editor\\" handlers={{...}}>
+                      <FocusTrap className=\\"Editor\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]} component=\\"div\\">
+                        <div tabIndex=\\"-1\\" className=\\"Editor\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]}>
+                          <div className=\\"row editor-react-ace\\">
+                            <ReactAce className=\\"react-ace\\" commands={{...}} editorProps={{...}} fontSize={14} height=\\"100%\\" highlightActiveLine={false} mode=\\"javascript\\" onChange={[Function]} theme=\\"cobalt\\" value=\\"This should not show up\\" width=\\"100%\\" name=\\"brace-editor\\" focus={false} showGutter={true} onPaste={{...}} onLoad={{...}} onScroll={{...}} minLines={{...}} maxLines={{...}} readOnly={false} showPrintMargin={true} tabSize={4} cursorStart={1} style={{...}} scrollMargin={{...}} setOptions={{...}} wrapEnabled={false} enableBasicAutocompletion={false} enableLiveAutocompletion={false}>
+                              <div id=\\"brace-editor\\" style={{...}} />
+                            </ReactAce>
+                          </div>
+                        </div>
+                      </FocusTrap>
+                    </HotKeys>
+                  </Editor>
+                  <span className={[undefined]} style={[undefined]}>
+                    <Resizer direction=\\"right\\" onResizeStart={[Function: bound onResizeStart]} replaceStyles={[undefined]} className={[undefined]}>
+                      <div className={[undefined]} style={{...}} onMouseDown={[Function: onMouseDown]} onTouchStart={[Function: onTouchStart]} />
+                    </Resizer>
+                  </span>
+                </div>
+              </Resizable>
+              <div className=\\"right-parent\\">
+                <Resizable bounds=\\"parent\\" className=\\"resize-side-content\\" enable={{...}} minHeight={0} onResize={[Function]} onResizeStop={[Function: onResizeStop]} size={{...}} onResizeStart={[Function: onResizeStart]} style={{...}} grid={{...}} lockAspectRatio={false} lockAspectRatioExtraWidth={0} lockAspectRatioExtraHeight={0} scale={1} resizeRatio={1}>
+                  <div style={{...}} className=\\"resize-side-content\\">
+                    <SideContent activeTab={0} handleChangeActiveTab={[Function: handleChangeActiveTab]} tabs={{...}}>
+                      <div className=\\"side-content\\">
+                        <Blueprint3.Card elevation={0} interactive={false}>
+                          <div className=\\"bp3-card bp3-elevation-0\\">
+                            <div className=\\"side-content-header\\">
+                              <Blueprint3.Tooltip content=\\"Introduction\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100}>
+                                <Blueprint3.Popover content=\\"Introduction\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100} autoFocus={false} canEscapeKeyClose={false} enforceFocus={false} interactionKind=\\"hover-target\\" lazy={true} popoverClassName=\\"bp3-tooltip\\" portalContainer={[undefined]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} inheritDarkTheme={true} minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" usePortal={true} wrapperTagName=\\"span\\">
+                                  <Manager>
+                                    <span className=\\"bp3-popover-wrapper\\">
+                                      <Reference innerRef={[Function: target]}>
+                                        <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                                          <Blueprint3.ResizeSensor onResize={[Function]}>
+                                            <span onBlur={[Function]} onFocus={[Function]} onMouseEnter={[Function]} onMouseLeave={[Function]} className=\\"bp3-popover-target\\">
+                                              <Blueprint3.Button className=\\"side-content-header-button\\" icon=\\"compass\\" minimal={true} onClick={[Function]} active={true} disabled={[undefined]} tabIndex={0}>
+                                                <button type=\\"button\\" className=\\"bp3-button bp3-active bp3-minimal side-content-header-button\\" onClick={[Function]} disabled={[undefined]} tabIndex={0} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                                  <Blueprint3.Icon icon=\\"compass\\">
+                                                    <span icon=\\"compass\\" className=\\"bp3-icon bp3-icon-compass\\" title={[undefined]}>
+                                                      <svg fill={[undefined]} data-icon=\\"compass\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                                        <desc>
+                                                          compass
+                                                        </desc>
+                                                        <path d=\\"M12 8c0 .14-.03.27-.08.39l-3 6.99c-.15.37-.51.62-.92.62s-.77-.25-.92-.61l-3-6.99a1.006 1.006 0 0 1 0-.79l3-6.99C7.23.25 7.59 0 8 0s.77.25.92.61l3 6.99c.05.13.08.26.08.4zM8 3.54L6.09 8h3.82L8 3.54z\\" fillRule=\\"evenodd\\" />
+                                                      </svg>
+                                                    </span>
+                                                  </Blueprint3.Icon>
+                                                  <Blueprint3.Icon icon={[undefined]} />
+                                                </button>
+                                              </Blueprint3.Button>
+                                            </span>
+                                          </Blueprint3.ResizeSensor>
+                                        </InnerReference>
+                                      </Reference>
+                                      <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={false} canOutsideClickClose={false} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={100} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                                    </span>
+                                  </Manager>
+                                </Blueprint3.Popover>
+                              </Blueprint3.Tooltip>
+                              <Blueprint3.Tooltip content=\\"List Visualizer\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100}>
+                                <Blueprint3.Popover content=\\"List Visualizer\\" hoverCloseDelay={0} hoverOpenDelay={100} transitionDuration={100} autoFocus={false} canEscapeKeyClose={false} enforceFocus={false} interactionKind=\\"hover-target\\" lazy={true} popoverClassName=\\"bp3-tooltip\\" portalContainer={[undefined]} boundary=\\"scrollParent\\" captureDismiss={false} defaultIsOpen={false} disabled={false} hasBackdrop={false} inheritDarkTheme={true} minimal={false} modifiers={{...}} openOnTargetFocus={true} position=\\"auto\\" targetTagName=\\"span\\" usePortal={true} wrapperTagName=\\"span\\">
+                                  <Manager>
+                                    <span className=\\"bp3-popover-wrapper\\">
+                                      <Reference innerRef={[Function: target]}>
+                                        <InnerReference getReferenceRef={[Function]} innerRef={[Function: target]}>
+                                          <Blueprint3.ResizeSensor onResize={[Function]}>
+                                            <span onBlur={[Function]} onFocus={[Function]} onMouseEnter={[Function]} onMouseLeave={[Function]} className=\\"bp3-popover-target\\">
+                                              <Blueprint3.Button className=\\"side-content-header-button\\" icon=\\"eye-open\\" minimal={true} onClick={[Function]} active={false} disabled={[undefined]} tabIndex={0}>
+                                                <button type=\\"button\\" className=\\"bp3-button bp3-minimal side-content-header-button\\" onClick={[Function]} disabled={[undefined]} tabIndex={0} onKeyDown={[Function]} onKeyUp={[Function]}>
+                                                  <Blueprint3.Icon icon=\\"eye-open\\">
+                                                    <span icon=\\"eye-open\\" className=\\"bp3-icon bp3-icon-eye-open\\" title={[undefined]}>
+                                                      <svg fill={[undefined]} data-icon=\\"eye-open\\" width={16} height={16} viewBox=\\"0 0 16 16\\">
+                                                        <desc>
+                                                          eye-open
+                                                        </desc>
+                                                        <path d=\\"M8.002 7.003a1.003 1.003 0 0 0 0 2.005 1.003 1.003 0 0 0 0-2.005zm7.988.972v-.02-.01-.02-.02a.675.675 0 0 0-.17-.36c-.509-.673-1.118-1.264-1.737-1.806-1.328-1.173-2.846-2.155-4.523-2.546a6.702 6.702 0 0 0-2.925-.06c-.889.18-1.738.541-2.546.992C2.84 4.837 1.692 5.81.694 6.902c-.18.211-.36.411-.53.632a.742.742 0 0 0 0 .932c.51.672 1.119 1.264 1.738 1.805 1.328 1.173 2.846 2.156 4.523 2.547.968.23 1.947.24 2.925.04.889-.18 1.738-.542 2.546-.993 1.248-.712 2.397-1.684 3.395-2.777.18-.2.37-.411.54-.632.09-.1.149-.23.169-.36v-.02-.02-.01-.02-.03c0-.01-.01-.01-.01-.02zm-7.988 3.038a2.998 2.998 0 0 1-2.995-3.008 2.998 2.998 0 0 1 2.995-3.008 2.998 2.998 0 0 1 2.996 3.008 2.998 2.998 0 0 1-2.996 3.008z\\" fillRule=\\"evenodd\\" />
+                                                      </svg>
+                                                    </span>
+                                                  </Blueprint3.Icon>
+                                                  <Blueprint3.Icon icon={[undefined]} />
+                                                </button>
+                                              </Blueprint3.Button>
+                                            </span>
+                                          </Blueprint3.ResizeSensor>
+                                        </InnerReference>
+                                      </Reference>
+                                      <Blueprint3.Overlay autoFocus={false} backdropClassName=\\"bp3-popover-backdrop\\" backdropProps={{...}} canEscapeKeyClose={false} canOutsideClickClose={false} className={[undefined]} enforceFocus={false} hasBackdrop={false} isOpen={false} onClose={[Function]} onClosed={[undefined]} onClosing={[undefined]} onOpened={[undefined]} onOpening={[undefined]} transitionDuration={100} transitionName=\\"bp3-popover\\" usePortal={true} portalContainer={[undefined]} lazy={true} />
+                                    </span>
+                                  </Manager>
+                                </Blueprint3.Popover>
+                              </Blueprint3.Tooltip>
+                            </div>
+                            <hr />
+                            <div className=\\"side-content-text\\">
+                              <Markdown content=\\"\\\\nWelcome to the Source Academy playground!\\\\n\\\\nThe language _Source_ is the official language of the textbook _Structure and\\\\nInterpretation of Computer Programs, JavaScript Adaptation_. You have never\\\\nheard of Source? No worries! It was invented just for the purpose of the book.\\\\nSource is a sublanguage of ECMAScript 2016 (7th Edition) and defined in [the\\\\ndocuments titled _\\"Source §x\\"_](https://www.comp.nus.edu.sg/~cs1101s/source/), where x refers to\\\\nthe respective textbook chapter. For example, Source §3 is suitable for\\\\ntextbook Chapter 3 and the preceeding chapters.\\\\n\\\\nThe playground comes with an editor and a REPL, on the left and right of the\\\\nscreen, respectively. You may customise the layout of the playground by\\\\nclicking and dragging on the right border of the editor, or the top border of\\\\nthe REPL.\\\\n\\">
+                                <div className=\\"md\\" dangerouslySetInnerHTML={{...}} />
+                              </Markdown>
+                            </div>
+                          </div>
+                        </Blueprint3.Card>
+                      </div>
+                    </SideContent>
+                    <div className=\\"side-content-divider\\" />
+                    <span className={[undefined]} style={[undefined]}>
+                      <Resizer direction=\\"bottom\\" onResizeStart={[Function: bound onResizeStart]} replaceStyles={[undefined]} className={[undefined]}>
+                        <div className={[undefined]} style={{...}} onMouseDown={[Function: onMouseDown]} onTouchStart={[Function: onTouchStart]} />
+                      </Resizer>
+                    </span>
+                  </div>
+                </Resizable>
+                <Repl output={{...}} replValue=\\"\\" handleBrowseHistoryDown={[Function: handleBrowseHistoryDown]} handleBrowseHistoryUp={[Function: handleBrowseHistoryUp]} handleReplEval={[Function: handleReplEval]} handleReplValueChange={[Function: handleReplValueChange]}>
+                  <div className=\\"Repl\\">
+                    <div className=\\"repl-output-parent\\">
+                      <HotKeys className=\\"repl-input-parent row pt-card pt-elevation-0\\" handlers={{...}}>
+                        <FocusTrap className=\\"repl-input-parent row pt-card pt-elevation-0\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]} component=\\"div\\">
+                          <div tabIndex=\\"-1\\" className=\\"repl-input-parent row pt-card pt-elevation-0\\" onFocus={[Function: bound onFocus]} onBlur={[Function: bound onBlur]}>
+                            <ReplInput output={{...}} replValue=\\"\\" handleBrowseHistoryDown={[Function: handleBrowseHistoryDown]} handleBrowseHistoryUp={[Function: handleBrowseHistoryUp]} handleReplEval={[Function: handleReplEval]} handleReplValueChange={[Function: handleReplValueChange]}>
+                              <ReactAce className=\\"repl-react-ace react-ace\\" mode=\\"javascript\\" theme=\\"cobalt\\" height=\\"1px\\" width=\\"100%\\" value=\\"\\" onChange={[Function: handleReplValueChange]} commands={{...}} minLines={1} maxLines={20} fontSize={14} highlightActiveLine={false} showGutter={false} name=\\"brace-editor\\" focus={false} onPaste={{...}} onLoad={{...}} onScroll={{...}} readOnly={false} showPrintMargin={true} tabSize={4} cursorStart={1} editorProps={{...}} style={{...}} scrollMargin={{...}} setOptions={{...}} wrapEnabled={false} enableBasicAutocompletion={false} enableLiveAutocompletion={false}>
+                                <div id=\\"brace-editor\\" style={{...}} />
+                              </ReactAce>
+                              <div className=\\"replInputBottom\\" />
+                            </ReplInput>
+                          </div>
+                        </FocusTrap>
+                      </HotKeys>
+                    </div>
+                  </div>
+                </Repl>
+              </div>
+            </div>
+          </div>
+        </Workspace>
+      </div>
+    </FocusTrap>
+  </HotKeys>
+</Playground>"
 `;

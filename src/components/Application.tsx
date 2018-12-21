@@ -70,9 +70,11 @@ const toAcademy = (props: IApplicationProps) =>
     ? () => <Redirect to="/login" />
     : () => <Academy accessToken={props.accessToken} role={props.role!} />
 
-const toLogin = (props: IApplicationProps) => () => (
-  <Login ivleToken={qs.parse(props.location.search).token} />
-)
+const toLogin = (props: IApplicationProps) => () => {
+  let token = qs.parse(props.location.search).token
+  token = (token instanceof Array ? token[0] : token) as string | undefined
+  return <Login ivleToken={token} />
+}
 
 const parsePlayground = (props: IApplicationProps) => {
   const prgrm = parsePrgrm(props)
@@ -89,19 +91,24 @@ const parsePlayground = (props: IApplicationProps) => {
 const parsePrgrm = (props: RouteComponentProps<{}>) => {
   const qsParsed = qs.parse(props.location.hash)
   // legacy support
-  const program = qsParsed.lz !== undefined ? qsParsed.lz : qsParsed.prgrm
+  let program = qsParsed.lz !== undefined ? qsParsed.lz : qsParsed.prgrm
+  program = (program instanceof Array ? program[0] : program) as string
   return program !== undefined ? decompressFromEncodedURIComponent(program) : undefined
 }
 
 const parseChapter = (props: RouteComponentProps<{}>) => {
-  const chapQuery = qs.parse(props.location.hash).chap
+  let chapQuery = qs.parse(props.location.hash).chap
+  chapQuery = (chapQuery instanceof Array ? chapQuery[0] : chapQuery) as string
   const chap = chapQuery === undefined ? NaN : parseInt(chapQuery, 10)
   return sourceChapters.includes(chap) ? chap : undefined
 }
 
-const parseExternalLibrary = (props: RouteComponentProps<{}>) => {
-  const ext = qs.parse(props.location.hash).ext || ''
-  return Object.values(ExternalLibraryNames).includes(ext) ? ext : ExternalLibraryNames.NONE
+const parseExternalLibrary = (props: RouteComponentProps<{}>): ExternalLibraryName => {
+  let ext = qs.parse(props.location.hash).ext || ''
+  ext = (ext instanceof Array ? ext[0] : ext) as string
+  return (Object.values(ExternalLibraryNames).includes(ext)
+    ? ext
+    : ExternalLibraryNames.NONE) as ExternalLibraryName
 }
 
 export default Application

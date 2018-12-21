@@ -34,5 +34,5 @@ export function mockClosure(): Closure {
 }
 
 export function mockTypeError(): TypeError {
-  return new TypeError(parse(''), '', '', '')
+  return new TypeError(parse('') as es.Node, '', '', '')
 }

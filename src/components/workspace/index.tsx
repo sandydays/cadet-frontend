@@ -1,4 +1,6 @@
-import Resizable, { ResizableProps, ResizeCallback } from 're-resizable'
+import * as Resizable from 're-resizable'
+const ResizableComponent = Resizable instanceof Function ? Resizable : (Resizable as any).default
+import { ResizableProps, ResizeCallback } from 're-resizable'
 import * as React from 'react'
 import { Prompt } from 'react-router'
 
@@ -23,13 +25,15 @@ export type WorkspaceProps = {
 }
 
 class Workspace extends React.Component<WorkspaceProps, {}> {
-  private editorDividerDiv: HTMLDivElement
+  private editorDividerDiv = React.createRef<HTMLDivElement>()
   private leftParentResizable: Resizable
   private maxDividerHeight: number
-  private sideDividerDiv: HTMLDivElement
+  private sideDividerDiv = React.createRef<HTMLDivElement>()
 
   public componentDidMount() {
-    this.maxDividerHeight = this.sideDividerDiv.clientHeight
+    if (this.sideDividerDiv.current) {
+      this.maxDividerHeight = this.sideDividerDiv.current.clientHeight
+    }
   }
 
   /**
@@ -48,15 +52,15 @@ class Workspace extends React.Component<WorkspaceProps, {}> {
         ) : null}
         <ControlBar {...this.controlBarProps()} />
         <div className="row workspace-parent">
-          <div className="editor-divider" ref={e => (this.editorDividerDiv = e!)} />
-          <Resizable {...this.editorResizableProps()}>
+          <div className="editor-divider" ref={this.editorDividerDiv} />
+          <ResizableComponent {...this.editorResizableProps()}>
             {this.createWorkspaceInput(this.props)}
-          </Resizable>
+          </ResizableComponent>
           <div className="right-parent">
-            <Resizable {...this.sideContentResizableProps()}>
+            <ResizableComponent {...this.sideContentResizableProps()}>
               <SideContent {...this.props.sideContentProps} />
-              <div className="side-content-divider" ref={e => (this.sideDividerDiv = e!)} />
-            </Resizable>
+              <div className="side-content-divider" ref={this.sideDividerDiv} />
+            </ResizableComponent>
             <Repl {...this.props.replProps} />
           </div>
         </div>
@@ -73,7 +77,7 @@ class Workspace extends React.Component<WorkspaceProps, {}> {
 
   private editorResizableProps() {
     const onResizeStop: ResizeCallback = ({}, {}, {}, diff) =>
-      this.props.handleEditorWidthChange(diff.width * 100 / window.innerWidth)
+      this.props.handleEditorWidthChange((diff.width * 100) / window.innerWidth)
     const ref = (e: Resizable) => (this.leftParentResizable = e as Resizable)
     return {
       className: 'resize-editor left-parent',
@@ -114,7 +118,7 @@ class Workspace extends React.Component<WorkspaceProps, {}> {
   private toggleEditorDividerDisplay: ResizeCallback = ({}, {}, ref) => {
     const leftThreshold = 2
     const rightThreshold = 95
-    const editorWidthPercentage = (ref as HTMLDivElement).clientWidth / window.innerWidth * 100
+    const editorWidthPercentage = ((ref as HTMLDivElement).clientWidth / window.innerWidth) * 100
     // update resizable size
     if (editorWidthPercentage > rightThreshold) {
       this.leftParentResizable.updateSize({ width: '100%', height: '100%' })
@@ -123,9 +127,9 @@ class Workspace extends React.Component<WorkspaceProps, {}> {
     }
     // Update divider margin
     if (editorWidthPercentage < leftThreshold) {
-      this.editorDividerDiv.style.marginRight = '0.6rem'
+      this.editorDividerDiv.current!.style.marginRight = '0.6rem'
     } else {
-      this.editorDividerDiv.style.marginRight = '0'
+      this.editorDividerDiv.current!.style.marginRight = '0'
     }
   }
 
@@ -135,15 +139,15 @@ class Workspace extends React.Component<WorkspaceProps, {}> {
    */
   private toggleDividerDisplay: ResizeCallback = ({}, {}, ref) => {
     this.maxDividerHeight =
-      this.sideDividerDiv.clientHeight > this.maxDividerHeight
-        ? this.sideDividerDiv.clientHeight
+      this.sideDividerDiv.current!.clientHeight > this.maxDividerHeight
+        ? this.sideDividerDiv.current!.clientHeight
         : this.maxDividerHeight
     const resizableHeight = (ref as HTMLDivElement).clientHeight
     const rightParentHeight = (ref.parentNode as HTMLDivElement).clientHeight
     if (resizableHeight + this.maxDividerHeight + 2 > rightParentHeight) {
-      this.sideDividerDiv.style.display = 'none'
+      this.sideDividerDiv.current!.style.display = 'none'
     } else {
-      this.sideDividerDiv.style.display = 'initial'
+      this.sideDividerDiv.current!.style.display = 'initial'
     }
   }
 

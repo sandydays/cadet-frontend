@@ -1,5 +1,5 @@
 import { Store } from 'redux'
-import * as mockStore from 'redux-mock-store'
+import configureStore from 'redux-mock-store'
 
 import {
   defaultAcademy,
@@ -10,8 +10,9 @@ import {
   IState
 } from '../reducers/states'
 
+const mockStore = configureStore([])
+
 export function mockInitialStore<P>(): Store<IState> {
-  const createStore = (mockStore as any)()
   const state: IState = {
     academy: defaultAcademy,
     application: defaultApplication,
@@ -19,5 +20,5 @@ export function mockInitialStore<P>(): Store<IState> {
     workspaces: defaultWorkspaceManager,
     session: defaultSession
   }
-  return createStore(state)
+  return mockStore(state) as any
 }
