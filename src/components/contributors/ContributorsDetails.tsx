@@ -83,7 +83,7 @@ class ContributorsDetails extends React.Component {
             </h5>
             <p>
               Here goes the full list of contributors to the Source Academy with their pull requests
-              in the repos: cadet, cadet-frontend, grader, js-slang, sharedb-ace-backend
+              in the repos: cadet, cadet-frontend, sicp, grader, js-slang, sharedb-ace-backend
             </p>
           </div>
         </div>
